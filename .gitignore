@@ -121,4 +121,13 @@ Desktop.ini
 # Error svg files
 *.svg
 
+# Local secret & per-user overrides
+# Per-user settings (config/<user_id>.settings.json) are loaded at runtime
+# (core/client.py:update_config) and would be deleted by updater.py's
+# `git clean -f -d` if left untracked, or accidentally committed otherwise.
+config/*.settings.json
+
+# Runtime log file (see core/client.py:log)
+logs.txt
+
 
